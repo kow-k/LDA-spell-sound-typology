@@ -1,2 +1,2 @@
-# LDA-spell-sound
+# LDA spell-sound typology
  
