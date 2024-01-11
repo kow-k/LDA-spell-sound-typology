@@ -8,15 +8,18 @@ term-list-*/
 terms-saved/
 TwentyNewsgroups/
 
+# ignore pseudo files
+data-texts-English
+
 # ignore .ipynb files
 *.ipynob
 # but include
-!LDA-*.ipynb
+!LDA-spell-sound.ipynb
 
 # ignore .R files
 *.R
 # but include
-!LDA-*.R
+#!LDA-*.R
 
 # ignore .txt files
 *.txt
