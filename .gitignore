@@ -8,11 +8,12 @@ TwentyNewsgroups/
 # ignore .ipynb files
 *.ipynob
 # but include
-!LDA-runner-spell-sound.ipynb
+!LDA-*.ipynb
 
 # ignore .R files
 *.R
-!apply-LDA-*.R
+# but include
+!LDA-*.R
 
 # ignore .txt files
 *.txt
