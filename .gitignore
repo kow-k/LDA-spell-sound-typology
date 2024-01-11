@@ -1,4 +1,5 @@
 # ignore folders
+.ipynb_checkpoints/
 data-texts-English/
 data-texts-Japanese/
 NLP30-spell-sound/
