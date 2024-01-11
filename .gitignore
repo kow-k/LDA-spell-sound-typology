@@ -1,4 +1,6 @@
 # ignore folders
+data-texts-English/
+data-texts-Japanese/
 NLP30-spell-sound/
 plots/
 term-list-*/
