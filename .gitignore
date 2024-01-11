@@ -1,0 +1,21 @@
+# ignore folders
+NLP30-spell-sound/
+plots/
+term-list-*/
+terms-saved/
+TwentyNewsgroups/
+
+# ignore .ipynb files
+*.ipynob
+# but include
+!LDA-runner-spell-sound.ipynb
+
+# ignore .R files
+*.R
+!apply-LDA-*.R
+
+# ignore .txt files
+*.txt
+
+# ignore .pdf files
+*.pdf
