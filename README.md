@@ -5,11 +5,18 @@ Data and scripts for analysis used for Finding structure in Spelling and Pronunc
 ## Data
 Text files
 
-1. [English spells (.csv)](data-words/base-spell-English-r6e-originals.csv)
+### Spell
+1. [English spells (.csv)](data-words/base-spell-English-r6e-original.csv)
 2. [French spells (.csv)](data-words/base-spell-French-r0-1k-mc.csv)
-3. [German spells (.csv)](data-words/base-spell-German-r1a-originals.csv)
+3. [German spells (.csv)](data-words/base-spell-German-r1a-original.csv)
 4. [Russian spells (.csv)](data-words/base-spell-Russian-r0-1k-mc.csv)
 5. [Swahili spells (.csv)](data-words/base-spell-Swahili-r0-1k-mc.csv)
+
+### Sound
+6. [English sounds (.csv)](data-words/base-sound-English-r6e-original.csv)
+7. [French sounds (.csv)](data-words/base-sound-French-r0-opendic-s900.csv)
+8. [German sounds (.csv)](data-words/base-sound-German-r1a-originals.csv)
+
 
 ## Scripts for data analysis
 Scripts for analysis (Jupyter notebooks)
