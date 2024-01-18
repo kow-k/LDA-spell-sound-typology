@@ -13,12 +13,13 @@ TwentyNewsgroups/
 data-texts-English
 
 # ignore .ipynb files
-*.ipynob
+*.ipynb
 # but include
 !LDA-spell-sound.ipynb
 
-# ignore .R files
+# ignore .R files and .Rproj
 *.R
+*.Rproj
 # but include
 #!LDA-*.R
 
