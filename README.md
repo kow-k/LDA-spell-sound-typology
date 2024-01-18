@@ -14,7 +14,7 @@ Text files
 ## Scripts for data analysis
 Scripts for analysis (Jupyter notebooks)
 
-1. [LDA clusterer (Jupyter notebook)](LDA-spell-sound.ipynb)
+1. [LDA spell/sound clusterer (Jupyter notebook)](LDA-spell-sound.ipynb)
 
 ## Prerequisites
 Needed Python packages
