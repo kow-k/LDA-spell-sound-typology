@@ -15,7 +15,7 @@ Text files
 ### Sound
 6. [English sounds (.csv)](data-words/base-sound-English-r6e-original.csv)
 7. [French sounds (.csv)](data-words/base-sound-French-r0-opendic-s900.csv)
-8. [German sounds (.csv)](data-words/base-sound-German-r1a-originals.csv)
+8. [German sounds (.csv)](data-words/base-sound-German-r1a-original.csv)
 
 
 ## Scripts for data analysis
