@@ -1,4 +1,4 @@
-# ignore folders
+# folders to ignore
 __pycache__/
 .ipynb_checkpoints/
 1k-most-common-words/
@@ -9,20 +9,18 @@ plots/
 term-list-*/
 terms-saved/
 TwentyNewsgroups/
-# ignore pseudo files
+# pseudo files to ignore
 data-texts-English
+1k-most-common-words
 # ignore .ipynb files
 *.ipynb
 # but include
 !LDA-spell-sound.ipynb
-# ignore .R files and .Rproj
+# files to ignore
 *.R
 *.Rproj
 # but include
 #!LDA-*.R
-# ignore .txt files
 *.txt
-# ignore .pdf files
 *.pdf
 
-1k-most-common-words
