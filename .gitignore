@@ -12,15 +12,11 @@ TwentyNewsgroups/
 # pseudo files to ignore
 data-texts-English
 1k-most-common-words
-# ignore .ipynb files
-*.ipynb
-# but include
-!LDA-spell-sound.ipynb
 # files to ignore
 *.R
 *.Rproj
-# but include
-#!LDA-*.R
 *.txt
 *.pdf
-
+*.ipynb
+# but include
+!LDA-spell-sound.ipynb
