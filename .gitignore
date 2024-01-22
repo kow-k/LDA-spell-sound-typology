@@ -5,6 +5,7 @@ __pycache__/
 data-texts-English/
 data-texts-Japanese/
 NLP30-spell-sound/
+open-dict-ipa/
 plots/
 term-list-*/
 terms-saved/
@@ -12,6 +13,7 @@ TwentyNewsgroups/
 # pseudo files to ignore
 data-texts-English
 1k-most-common-words
+open-dict-ipa
 # files to ignore
 *.R
 *.Rproj
