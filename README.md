@@ -23,6 +23,8 @@ Scripts for analysis (Jupyter notebooks)
 
 1. [LDA spell/sound clusterer (Jupyter notebook)](LDA-spell-sound.ipynb)
 
+Running was confirmed on Python 3.9, 3.10, and 3.11.
+
 Important Parameters:
 
 1. **n_topics** [integer]: number of topics for LDA
