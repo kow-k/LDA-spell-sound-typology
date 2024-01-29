@@ -23,6 +23,19 @@ Scripts for analysis (Jupyter notebooks)
 
 1. [LDA spell/sound clusterer (Jupyter notebook)](LDA-spell-sound.ipynb)
 
+Important Parameters:
+
+1. **n_topics** [integer]: number of topics for LDA
+2. **doc_attr** [string]: any of "spell", "sound"
+3. **max_doc_size** [integer]: maximum character length for docs to process
+4. **term_type** [string]: any of "1gram", "2gram", "3gram", "skippy2gram", "skippy3gram"
+5. **ngram_is_inclusive** [boolean]: a flag for making ngrams inclusive
+6. **max_distance_val** [int, depending on max_doc_size]: scope of skippy n-grams links
+7. **term_min_freq** [integer]: a filter against too infrequent terms (valued for gensim's "minfreq")
+8. **term_abuse_threshold** [float: 0~1.0]: a filter against too frequent terms (valued for gensim's "abuse_theshold")
+
+Other paramers used are not recommended to modify. Do so at your own risk.
+
 ## Prerequisites
 Needed Python packages
 
