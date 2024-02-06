@@ -2,11 +2,12 @@
 ## created by Kow Kuroda
 ## on 2023/10/29
 ## modified on 2023/10/30, 31; 11/07, 08, 27
+## 2024/02/05: added minimize option to control over the redundant elements
 
 import re
 
 ##
-def generate_skippy_bigrams (L, sep = "", ignore_adjacency = False, max_distance = None, missing_mark = "_", chars_to_strip = "", check = False):
+def generate_skippy_bigrams (L, sep = "", ignore_adjacency = False, max_distance = None, missing_mark = "_", chars_to_strip = "", minimize = True, check = False):
 	"""
 	generate skippy trigram from a given list of items
 
@@ -19,12 +20,13 @@ def generate_skippy_bigrams (L, sep = "", ignore_adjacency = False, max_distance
 	- missing_mark [string] replaces the symbol for missing_mark
 	- chars_to_strip [string] removes extra characters in [string]
 	- inclusively [boolean] generates n-grams inclusively (e.g., 2-grams include 1-grams)
+	- minimize [boolean] turns on or off inclusion of redundant elements [defaults to True]
 	- check [boolean] sets on and off printing internal objects
 	"""
 
 	##
 	if check:
-		print(f"raw input: {L}")
+		print(f"# raw input: {L}")
 
 	## modify forms
 	if sep == "" and chars_to_strip:
@@ -60,13 +62,18 @@ def generate_skippy_bigrams (L, sep = "", ignore_adjacency = False, max_distance
 							else:
 								b = L[i] + missing_mark + L[j]
 						## adding the generated unit to B
-						if check: print(f"b: {b}")
-						if b not in B:
+						if check:
+							print(f"# b: {b}")
+						## filter elements to add
+						if minimize:
+							if b not in B:
+								B.append(b)
+						else:
 							B.append(b)
 	return B
 
 ##
-def generate_skippy_trigrams (L, sep = "", ignore_adjacency = False, max_distance = None, missing_mark = "_", chars_to_strip = "", check = False):
+def generate_skippy_trigrams (L, sep = "", ignore_adjacency = False, max_distance = None, missing_mark = "_", chars_to_strip = "", minimize = True, check = False):
 	"""
 	generate skippy trigrams from a given list of items
 
@@ -84,7 +91,7 @@ def generate_skippy_trigrams (L, sep = "", ignore_adjacency = False, max_distanc
 
 	##
 	if check:
-		print(f"raw input: {L}")
+		print(f"# raw input: {L}")
 
 	## modify forms
 	if sep == "" and chars_to_strip:
@@ -128,8 +135,12 @@ def generate_skippy_trigrams (L, sep = "", ignore_adjacency = False, max_distanc
 										t = L[i] + missing_mark + L[j] + missing_mark + L[k]
 									## appending the generated unit
 								if check:
-									print(f"t: {t}")
-								if t not in T:
+									print(f"# t: {t}")
+								## filter elements to add
+								if minimize:
+									if t not in T:
+										T.append(t)
+								else:
 									T.append(t)
 	#
 	return T
