@@ -3,6 +3,7 @@
 ## on 2023/10/29
 ## modified on 2023/10/30, 31; 11/07, 08, 27
 ## 2024/02/05: added minimize option to control over the redundant elements
+## 2024/02/08: added aliases, gen_skippy_2grams and gen_skippy_3grams
 
 import re
 
@@ -71,6 +72,9 @@ def generate_skippy_bigrams (L, sep = "", ignore_adjacency = False, max_distance
 						else:
 							B.append(b)
 	return B
+
+## alias
+gen_skippy_2grams = generate_skippy_bigrams
 
 ##
 def generate_skippy_trigrams (L, sep = "", ignore_adjacency = False, max_distance = None, missing_mark = "_", chars_to_strip = "", minimize = True, check = False):
@@ -144,5 +148,8 @@ def generate_skippy_trigrams (L, sep = "", ignore_adjacency = False, max_distanc
 									T.append(t)
 	#
 	return T
+
+## alias
+gen_skippy_3grams = generate_skippy_trigrams
 
 ### end of module
