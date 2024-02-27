@@ -74,6 +74,7 @@ def generate_skippy_bigrams (L, sep = "", ignore_adjacency = False, max_distance
 	return B
 
 ## alias
+gen_skippy_bigrams = generate_skippy_bigrams
 gen_skippy_2grams = generate_skippy_bigrams
 
 ##
@@ -150,6 +151,7 @@ def generate_skippy_trigrams (L, sep = "", ignore_adjacency = False, max_distanc
 	return T
 
 ## alias
+gen_skippy_trigrams = generate_skippy_trigrams
 gen_skippy_3grams = generate_skippy_trigrams
 
 ### end of module

@@ -1,7 +1,8 @@
 ## generator fuctions for 2-gram, 3-gram
 ## developed by Kow Kuroda (kow.kuroda@gmail.com)
+## 2024/02/20: added alises
 
-def gen_unigrams (L, sep = r"", check = False):
+def gen_unigrams (L: list, sep = r"", check = False):
 	"""
 	returns the 1-gram of the items in list L with separator regex
 	"""
@@ -15,9 +16,11 @@ def gen_unigrams (L, sep = r"", check = False):
 			print(seg)
 		U.append(seg)
 	return (U)
+## alises
+gen_1grams = gen_unigrams
 
 ## bigram
-def gen_bigrams (L, sep = r"", joint = "", check = False):
+def gen_bigrams (L: list, sep = r"", joint = "", check = False):
 	import re
 	n = 2
 	B = [ ]
@@ -39,8 +42,11 @@ def gen_bigrams (L, sep = r"", joint = "", check = False):
 			B.append(C)
 	return (B)
 
+## alises
+gen_2grams = gen_bigrams
+
 ### trigram
-def gen_trigrams (L, sep = r"", joint = "", check = False):
+def gen_trigrams (L: list, sep = r"", joint = "", check = False):
 	import re
 	n = 3
 	T = [ ]
@@ -61,5 +67,8 @@ def gen_trigrams (L, sep = r"", joint = "", check = False):
 					C.append(joint.join(y))
 			T.append(C)
 	return (T)
+
+## alises
+gen_3grams = gen_trigrams
 
 ### end of script
