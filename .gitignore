@@ -22,3 +22,4 @@ open-dict-ipa
 *.ipynb
 # but include
 !LDA-spell-sound.ipynb
+.vscode/settings.json
