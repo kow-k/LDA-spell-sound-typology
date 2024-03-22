@@ -16,6 +16,8 @@ data-texts-English
 open-dict-ipa
 # files to ignore
 *.R
+*.RData
+*.Rhistory
 *.Rproj
 *.txt
 *.pdf
@@ -23,3 +25,5 @@ open-dict-ipa
 # but include
 !LDA-spell-sound.ipynb
 .vscode/settings.json
+.Rproj.user
+.httr-oauth
