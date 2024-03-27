@@ -29,3 +29,5 @@ open-dict-ipa
 .httr-oauth
 results/heatmp-ntop10-co-clusteredness-correlation-20-langs.png
 results/heatmp-ntop20-co-clusteredness-correlation-20-langs.png
+topic_detail.csv
+topics_for_corpus.csv
