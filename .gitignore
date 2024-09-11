@@ -23,7 +23,7 @@ open-dict-ipa
 *.pdf
 *.ipynb
 # but include
-!LDA-spell-sound.ipynb
+!LDA-spell-sound-explorer.ipynb
 .vscode/settings.json
 .Rproj.user
 .httr-oauth
