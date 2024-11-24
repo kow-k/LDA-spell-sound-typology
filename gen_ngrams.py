@@ -37,8 +37,12 @@ def gen_ngrams (S: list, n: int, sep = " ", as_list = False, check = False):
     if check:
         print(f"#S: {S}")
     #
-    if len(S) < n:
-        return S
+    assert n > 0
+    if len(S) <= n:
+        if as_list:
+            return S
+        else:
+            return [ sep.join(S) ]
     #
     R = [ ]
     for i, x in enumerate(S):
@@ -51,7 +55,8 @@ def gen_ngrams (S: list, n: int, sep = " ", as_list = False, check = False):
     ##
     if as_list:
         return R
-    return [ sep.join(x) for x in R ]
+    else:
+        return [ sep.join(x) for x in R ]
 
 ##
 def gen_skippy_ngrams (S: list, n: int, max_distance = None, sep: str = " ", missing_mark: str = "…", as_list: bool = False, check: bool = False):
@@ -61,8 +66,12 @@ def gen_skippy_ngrams (S: list, n: int, max_distance = None, sep: str = " ", mis
     if check:
         print(f"#S: {S}")
     #
-    if len(S) < n:
-        return S
+    assert n > 0
+    if len(S) <= n:
+        if as_list:
+            return S
+        else:
+            return [ sep.join(S) ]
     ## generate target index list
     S_len = len(S)
     R = range(S_len)
@@ -132,7 +141,8 @@ def gen_ngrams_from_str (text: str, n: int, sep = " ", as_list = False, check = 
     ##
     if as_list:
         return R
-    return [ sep.join(x) for x in R ]
+    else:
+        return [ sep.join(x) for x in R ]
 
 ##
 def gen_skippy_ngrams_from_str (text: str, n: int, sep: str = " ", missing_mark: str = "…", max_distance = None, as_list: bool = False, check: bool = False):
@@ -198,17 +208,17 @@ def main():
     text1 = "abcdefghij"
     print(f"input: '{text1}'")
     print(gen_skippy_ngrams_from_str (text1, 3, sep = " ", check = False))
-    
+
     # test 2
     text2 = "abc   def  gh ijk lmn   op"
     print(f"input: '{text2}'")
     print(gen_skippy_ngrams_from_str (text2, 3, sep = " ", as_list = False, check = False))
-    
+
     # test 3
     text3 = "abde"
     print(f"input: '{text3}'")
     print(gen_skippy_ngrams_from_str (text3, 4, sep = " ", check = False))
-    
+
     # test 4
     print(f"input: '{text3}'")
     print(gen_skippy_ngrams_from_str (text3, 5, sep = " ", check = False))
@@ -216,7 +226,7 @@ def main():
     ## test 5
     print(f"input: '{text1}'")
     print(gen_ngrams (text1, 5, sep = "", check = False))
-    
+
     ## test 6
     print(f"input: '{text2}'")
     print(gen_ngrams (text2, 3, sep ="", check = False))
